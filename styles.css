@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/trees.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+}
+
+.plane{
+    height: 100px;
+    width: 280px;
+    background-image: url(images/plane.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 100px;
+    transform: scaleX(-1);
+    animation: linear infinite ;
+    animation-name: fly;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fly{
+    0%{
+        right: 0;
+        transform: translateX(0)
+    }
+    100%{
+        right: 100%;
+        transform: translateX(-100%);
+    }
+}
